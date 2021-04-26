@@ -16,7 +16,7 @@ export default class CommentList extends React.Component {
 		const PostComments = UC_Collection_Access.find({post_id: this.props.post_id}, {sort: {likes: -1}}).fetch();
 		if(PostComments.length == 0) {
 			return (
-					<p>No Comments (Yet!)</p>
+					<p className='single-block-item-style'>No Comments (Yet!)</p>
 			);
 		} else {
 			return PostComments.map((comment) => {
